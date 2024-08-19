@@ -1,9 +1,7 @@
-import saludar from "./saludador";
+import saludar from "./saludador.js";
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const nombre =` ${input.value}`;
-
-  div.innerHTML = "<p>" + saludar(nombre) + "</p>";
+document.addEventListener("DOMContentLoaded", () => {
+    const nombre = prompt("¿Cuál es tu nombre?");
+    const divSaludo = document.getElementById('saludo');
+    divSaludo.innerHTML = `<p>${saludar(nombre)}</p>`;
 });

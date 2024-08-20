@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saludo con Nombre</title>
 </head>
 <body>
+    <h1>Bienvenido</h1>
+    <form id="saludoForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
+        
+        <button type="submit">Saludar</button>
+    </form>
+    
     <div id="saludo"></div>
-
-    <script src="src/presenter.js" type="module"></script>
+    
+    <script src="./src/presenter.js" type="module"></script>
 </body>
 </html>

@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         
+        const idioma = document.getElementById('idioma').value;
         const nombre = document.getElementById('nombre').value;
         const genero = document.getElementById('genero').value;
         const edad = document.getElementById('edad').value;
         
-        saludoDiv.innerHTML = `<p>${saludar(nombre, genero, edad)}</p>`;
+        saludoDiv.innerHTML = `<p>${saludar(nombre, genero, edad, idioma)}</p>`;
     });
 });

@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saludo con Nombre</title>
+    <title>Saludo</title>
 </head>
 <body>
-    <h1>Bienvenido</h1>
     <form id="saludoForm">
+
+        <select id="idioma" name="idioma" required>
+            <option value="ingles">Ingles</option>
+            <option value="espanol">Español</option>
+        </select>
+
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         

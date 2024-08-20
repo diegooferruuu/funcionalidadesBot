@@ -1,19 +1,29 @@
-function saludar(nombre, genero) {
-  let saludoGenero = "";
+function saludar(nombre, genero, edad) {
+  let saludo = "";
   
   switch(genero) {
       case 'masculino':
-          saludoGenero = "Sr.";
+        if (edad > 30) {
+          saludo = "Sr.";
+        }
+        else {
+          saludo = "Joven";
+        }
           break;
       case 'femenino':
-          saludoGenero = "Sra.";
+        if (edad > 30) {
+          saludo = "Sra.";
+        }
+        else {
+          saludo = "Señorita";
+        }
           break;
       case 'otro':
-          saludoGenero = "";
+          saludo = "";
           break;
   }
   
-  return `Hola ${saludoGenero} ${nombre}`;
+  return `Hola ${saludo} ${nombre}`;
 }
 
 export default saludar;

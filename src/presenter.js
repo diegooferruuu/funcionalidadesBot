@@ -5,11 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const saludoDiv = document.getElementById('saludo');
 
     form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Evitar que el formulario recargue la página
+        event.preventDefault();
         
         const nombre = document.getElementById('nombre').value;
         const genero = document.getElementById('genero').value;
+        const edad = document.getElementById('edad').value;
         
-        saludoDiv.innerHTML = `<p>${saludar(nombre, genero)}</p>`;
+        saludoDiv.innerHTML = `<p>${saludar(nombre, genero, edad)}</p>`;
     });
 });
